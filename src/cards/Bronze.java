@@ -1,5 +1,12 @@
 package cards;
 
-public final class Bronze extends Card {
+import products.Product;
 
+public final class Bronze extends Card {
+	
+	@Override
+	public double accept(Product product) {
+		return product.visitBronzeCard(this);
+	}
+	
 }

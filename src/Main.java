@@ -1,6 +1,8 @@
 import java.util.Vector;
 
+import cards.Bronze;
 import cards.Card;
+import cards.Gold;
 import products.Food;
 import products.Product;
 
@@ -12,7 +14,9 @@ public class Main {
 		cart.add(new Food("Wiskas", 5500));
 		cart.add(new Food("Lays", 7500));
 		
-		Card myCard = null;
+		Card myCard = new Gold();
+		
+		double totalPrice = 0;
 		
 		// TODO: Calculate Price + Discount
 		/**
@@ -32,9 +36,11 @@ public class Main {
 		 * 3. Hotel = 50%;
 		 */
 		
-		for (Product item : cart) {
-			System.out.println(item.toString());
+		for (Product product : cart) {
+			totalPrice += myCard.accept(product);
 		}
+		
+		System.out.println("Total Price : Rp. " + totalPrice);
 	}
 	
 }
