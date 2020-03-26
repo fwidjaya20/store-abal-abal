@@ -1,5 +1,5 @@
 package cards;
 
-public final class Silver {
+public final class Silver extends Card {
 
 }

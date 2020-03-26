@@ -1,5 +1,5 @@
 package cards;
 
-public final class Bronze {
+public final class Bronze extends Card {
 
 }
